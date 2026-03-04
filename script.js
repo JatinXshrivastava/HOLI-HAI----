@@ -1,3 +1,4 @@
+
         //   THEME COLORS
         const COLORS = [
             '#ff4d9e', '#ff8c00', '#ffd700',
@@ -244,7 +245,8 @@
             width:${size}px; height:${size}px;
             background:${c}; opacity:0.7;
             transition: opacity 0.6s, transform 0.6s;
-            box-shadow: 0 0 ${size}px ${`;
+            box-shadow: 0 0 ${size}px ${c};
+            `;
                 document.body.appendChild(dot);
                 requestAnimationFrame(() => {
                     dot.style.opacity = '0';
