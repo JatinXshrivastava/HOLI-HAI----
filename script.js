@@ -1,6 +1,4 @@
-// ============================================================
         //   THEME COLORS
-        // ============================================================
         const COLORS = [
             '#ff4d9e', '#ff8c00', '#ffd700',
             '#39d353', '#00d4ff', '#b44fff',
@@ -8,10 +6,7 @@
             '#fb5ffe', '#ffaa00', '#6affb4'
         ];
         let selectedColor = null; // null = random
-
-        // ============================================================
         //   BACKGROUND PARTICLES
-        // ============================================================
         const bgCanvas = document.getElementById('bgCanvas');
         const bgCtx = bgCanvas.getContext('2d');
         const splashCanvas = document.getElementById('splashCanvas');
@@ -66,10 +61,7 @@
             requestAnimationFrame(animateBg);
         }
         animateBg();
-
-        // ============================================================
         //   SPLASH PARTICLES (click effect)
-        // ============================================================
         let splashParticles = [];
 
         class SplashParticle {
@@ -136,7 +128,7 @@
         left:${x - size / 2}px; top:${y - size / 2}px;
         width:${size}px; height:${size}px;
         background:${c}; opacity:0.5;
-      `;
+        `;
             document.body.appendChild(burst);
             setTimeout(() => burst.remove(), 900);
         }
@@ -150,10 +142,7 @@
             const t = e.touches[0];
             spawnSplash(t.clientX, t.clientY, selectedColor);
         }, { passive: true });
-
-        // ============================================================
         //   PALETTE DOTS – click to pick color
-        // ============================================================
         document.querySelectorAll('.palette-dot').forEach(dot => {
             dot.addEventListener('click', e => {
                 e.stopPropagation();
@@ -167,10 +156,7 @@
                 );
             });
         });
-
-        // ============================================================
         //   CELEBRATE BUTTON – confetti explosion
-        // ============================================================
         document.getElementById('celebrateBtn').addEventListener('click', () => {
             // Massive multi-point splash
             for (let i = 0; i < 10; i++) {
@@ -202,16 +188,13 @@
             animation-duration: ${Math.random() * 2 + 2}s;
             animation-delay: ${Math.random() * 0.5}s;
             opacity: 1;
-          `;
+            `;
                     document.body.appendChild(el);
                     setTimeout(() => el.remove(), 5000);
                 }, i * 20);
             }
         }
-
-        // ============================================================
         //   FLOATING RINGS (background decoration)
-        // ============================================================
         const ringsEl = document.getElementById('rings');
         const ringData = [
             { size: 300, x: 10, y: 20, color: '#ff4d9e', dur: 6 },
@@ -230,13 +213,10 @@
         border-color:${d.color};
         animation-duration:${d.dur}s;
         animation-delay:${Math.random() * -d.dur}s;
-      `;
+        `;
             ringsEl.appendChild(el);
         });
-
-        // ============================================================
         //   AUTO CONFETTI on load for festive feel
-        // ============================================================
         window.addEventListener('load', () => {
             setTimeout(() => spawnConfettiRain(60), 800);
             setTimeout(() => {
@@ -250,10 +230,7 @@
                 }
             }, 1500);
         });
-
-        // ============================================================
         //   MOUSE TRAIL (light color trail)
-        // ============================================================
         let trailTimeout;
         document.addEventListener('mousemove', e => {
             clearTimeout(trailTimeout);
@@ -262,13 +239,12 @@
                 const c = COLORS[Math.floor(Math.random() * COLORS.length)];
                 const size = Math.random() * 10 + 5;
                 dot.style.cssText = `
-          position:fixed; border-radius:50%; pointer-events:none; z-index:5;
-          left:${e.clientX - size / 2}px; top:${e.clientY - size / 2}px;
-          width:${size}px; height:${size}px;
-          background:${c}; opacity:0.7;
-          transition: opacity 0.6s, transform 0.6s;
-          box-shadow: 0 0 ${size}px ${c};
-        `;
+            position:fixed; border-radius:50%; pointer-events:none; z-index:5;
+            left:${e.clientX - size / 2}px; top:${e.clientY - size / 2}px;
+            width:${size}px; height:${size}px;
+            background:${c}; opacity:0.7;
+            transition: opacity 0.6s, transform 0.6s;
+            box-shadow: 0 0 ${size}px ${`;
                 document.body.appendChild(dot);
                 requestAnimationFrame(() => {
                     dot.style.opacity = '0';
