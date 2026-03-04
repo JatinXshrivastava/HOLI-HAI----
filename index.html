@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Holi 🎨 – Festival of Colors</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;900&family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background rings -->
+    <div class="rings" id="rings"></div>
+
+    <!-- Background particle canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Splash canvas (click effects) -->
+    <canvas id="splashCanvas"></canvas>
+
+    <!-- Main Page -->
+    <main class="page">
+
+        <div class="festival-badge">🎉 Festival of Colors · 2026 🎉</div>
+
+        <h1 class="hero-title">HAPPY HOLI!</h1>
+        <p class="hero-sub">FESTIVAL OF COLORS 🌈</p>
+        <p class="hero-tagline">May this Holi paint your world with joy, love &amp; endless colors ✨</p>
+
+        <!-- Color palette -->
+        <div class="palette" id="palette">
+            <div class="palette-dot" style="background:var(--pink);   box-shadow:0 0 20px var(--pink)"
+                data-color="#ff4d9e" title="Gulabi – Pink"></div>
+            <div class="palette-dot" style="background:var(--orange); box-shadow:0 0 20px var(--orange)"
+                data-color="#ff8c00" title="Narangi – Orange"></div>
+            <div class="palette-dot" style="background:var(--yellow); box-shadow:0 0 20px var(--yellow)"
+                data-color="#ffd700" title="Peela – Yellow"></div>
+            <div class="palette-dot" style="background:var(--green);  box-shadow:0 0 20px var(--green)"
+                data-color="#39d353" title="Hara – Green"></div>
+            <div class="palette-dot" style="background:var(--cyan);   box-shadow:0 0 20px var(--cyan)"
+                data-color="#00d4ff" title="Nila – Blue"></div>
+            <div class="palette-dot" style="background:var(--purple); box-shadow:0 0 20px var(--purple)"
+                data-color="#b44fff" title="Baingani – Purple"></div>
+            <div class="palette-dot" style="background:var(--red);    box-shadow:0 0 20px var(--red)"
+                data-color="#ff3333" title="Lal – Red"></div>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="cards">
+            <div class="card">
+                <span class="icon">🌺</span>
+                <h3>Tradition &amp; Spirit</h3>
+                <p>Holi marks the victory of good over evil and the arrival of spring — celebrated with vibrant colored
+                    powders, water, and boundless joy.</p>
+            </div>
+            <div class="card">
+                <span class="icon">🎊</span>
+                <h3>Colors of Life</h3>
+                <p>Each hue tells a story — red for love, yellow for prosperity, green for new beginnings, blue for
+                    divine energy. Paint your life with all!</p>
+            </div>
+            <div class="card">
+                <span class="icon">🔥</span>
+                <h3>Holika Dahan</h3>
+                <p>The eve of Holi is lit with the bonfire of Holika Dahan, symbolising the triumph of devotion and the
+                    burning away of negativity.</p>
+            </div>
+        </div>
+
+        <!-- Quote -->
+        <section class="quote-section">
+            <p class="quote">"Holi is the celebration of colors that life offers — embrace every shade, for each one
+                makes your story more beautiful."</p>
+            <p class="quote-author">— Ancient Indian Proverb</p>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-wrapper">
+            <button class="cta-btn" id="celebrateBtn">🎨 Throw Colors Everywhere!</button>
+        </div>
+
+        <p class="footer">Made with <span>♥</span> by jatin with a million colors &nbsp;·&nbsp; Happy Holi 2026</p>
+
+    </main>
+
+    <!-- Hint -->
+    <div id="splashHint">🖱️ Click anywhere to throw colors!</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
